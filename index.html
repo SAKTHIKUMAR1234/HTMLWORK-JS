@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD OPERATIONS</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="cls-str">
+        <div class="temp"></div>
+        <div class="main-cls">
+            <div class="head-cls">
+                <div class="title">
+                    <h1>Employee Management System</h1>
+                    <button class="btn" onclick="add_menu()">Add Employee</button>
+                </div>
+                <div class="alert" id="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <p id="msg"></p>
+                </div>
+                <div class="edit">
+                    <form id="edit-form">
+                        <div class="form-sec">
+                            <div>Employee Id : <input class="input" id="emp-id" type="number" placeholder="Enter Employee Id" required></div>
+                            <div>Name : <input class="input" id="emp-name" type="text" placeholder="Enter your Name"></div>
+                            <div>Designation : <input class="input" id="emp-desc" type="text" placeholder="Enter your Designation" required></div>
+                            <div>Salary : <input class="input" id="emp-sal" type="number" required></div>
+                            <div>City : <input class="input" id="emp-city" type="text" required></div>
+                            <div><button onclick="add_employee()" class="btn">Add Data</button></div>
+                            <div><button onclick="exit_menu(1)" class="btn">close</button></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="update">
+                    <form id="update-form">
+                        <div class="form-sec">
+                            <div>Employee Id : <input class="input" id="emp-id" type="number" placeholder="Enter Employee Id" required></div>
+                            <div>Name : <input class="input" id="emp-name" type="text" placeholder="Enter your Name"></div>
+                            <div>Designation : <input class="input" id="emp-desc" type="text" placeholder="Enter your Designation" required></div>
+                            <div>Salary : <input class="input" id="emp-sal" type="number" required></div>
+                            <div>City : <input class="input" id="emp-city" type="text" required></div>
+                            <div><button onclick="update_employee()" class="btn">Update Data</button></div>
+                            <div><button onclick="exit_menu(2)" class="btn">close</button></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="main-table" id="main-table">
+                    <div class="row-data row-head">
+                        <div><a>Employee Id</a></div>
+                        <div><a>Name</a></div>
+                        <div><a>Designation</a></div>
+                        <div><a>Salary</a></div>
+                        <div><a>City</a></div>
+                        <div><a>Action</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="temp"></div>
+    </div>
+
+</body>
+
+</html>
